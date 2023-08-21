@@ -1,8 +1,8 @@
-# EALink: An Efficient and Accurate Pre-Trained Framework for Issue-Commit Link Recovery
-Source code for the ASE'23 paper ``EALink: An Efficient and Accurate Pre-Trained Framework for Issue-Commit Link Recovery``.
+# EALink: An Efficient and Accurate Pre-trained Framework for Issue-Commit Link Recovery
+Source code for the ASE'23 paper ``EALink: An Efficient and Accurate Pre-trained Framework for Issue-Commit Link Recovery``.
 
 ## Folder
-- ```Dstill``` folder contains the data class file ```dataset.py``` used in the distillation step, the configuration file ```tiny_bert_config.json``` and the distillation source file  ```bertdistill.py ```.
+- ```Dstill``` folder contains the data format used in the distillation step ```dataset.py```, the configuration file ```tiny_bert_config.json``` for student model and the distillation file  ```bertdistill.py ```.
 - ```LinkGenerator``` folder contains the ```parser_lang``` folder for parsing abstract syntax trees and preprocessing steps for raw data.
 - ```data``` is used to store the processed datasets (you can get it in the link below).
 - ```models```contains training and testing files.
@@ -19,13 +19,13 @@ Source code for the ASE'23 paper ``EALink: An Efficient and Accurate Pre-Trained
 * GPU with CUDA 11.3
 
 ## Datasets
-We have constructed six large-scale project datasets for evaluating issue-commit link recovery. You can download the *[final dataset](https://drive.google.com/drive/folders/1coZbAtOYGPVQQdjf2MnykMFpfLyhw1JZ)* described in the paper. To generate the dataset used for EALink in our experiments, please follow the data preprocessing steps.
+We have constructed six large-scale project datasets for evaluating issue-commit link recovery. You can download the final dataset ([Google Drive](https://drive.google.com/drive/folders/1coZbAtOYGPVQQdjf2MnykMFpfLyhw1JZ) or [阿里云盘](https://www.aliyundrive.com/s/V9zjsPJLQLd)) described in the paper. To generate the dataset used for EALink in our experiments, please follow the data preprocessing steps.
 
 ## How to run
  
 ### 1. Data preprocessing
 
-You can follow the steps in the `LinkGenerator` folder to generate the dataset used for EALink. Or you can directly download the [processed dataset](https://drive.google.com/drive/folders/1c-HkdL7xaKm9OYMlXYyxSVlw3ywnqhXA) for use.
+You can follow the steps in the `LinkGenerator` folder to generate the dataset used for EALink. Or you can directly download the processed dataset ([Google Drive](https://drive.google.com/drive/folders/1c-HkdL7xaKm9OYMlXYyxSVlw3ywnqhXA) or [阿里云盘](https://www.aliyundrive.com/s/2rKTLs7mTUe)) for use.
 
 #### Get issue-code links for auxiliary task
 In the `LinkGenerator` folder, `0_subdata.py` generates issue-code links. You can run the following command：
